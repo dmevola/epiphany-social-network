@@ -1,0 +1,26 @@
+{
+  "name": "epiphany-social-network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmevola/epiphany-social-network.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmevola/epiphany-social-network/issues"
+  },
+  "homepage": "https://github.com/dmevola/epiphany-social-network#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "moment": "^2.29.2",
+    "mongoose": "^6.2.10",
+    "nodemon": "^2.0.15"
+  }
+}
