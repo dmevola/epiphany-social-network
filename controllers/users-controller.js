@@ -2,7 +2,7 @@ const {Users} = require('../models');
 
 // users controller
 
-const userController = {
+const usersController = {
 
     //new user
     createUsers({body}, res) {
@@ -59,6 +59,7 @@ updateUsers({params, body}, res) {
     .catch(err => res.json(err))
 },
 
+// Delete a user by ID
 deleteUsers({params}, res) {
     Users.findOneAndDelete({_id: params.id})
     .then(dbUsersData => {
@@ -71,7 +72,7 @@ deleteUsers({params}, res) {
     .catch(err => res.status(400).json(err));
 },
 
-// Delete a user by ID
+// add friend by id
 addFriend({params}, res) {
     Users.findOneAndUpdate({_id: params.id}, {$push: { friends: params.friendId}}, {new: true})
     .populate({path: 'friends', select: ('-__v')})
